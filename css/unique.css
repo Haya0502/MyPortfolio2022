@@ -109,9 +109,9 @@ nav ul li a {
 =============================================================================================*/
 #top {
   min-height: 400px;
-  height: calc(100vh - 64px);
+  height: calc(93vh - 64px);
   color: #ffffff;
-  background-image: url(https://github.com/Haya0502/myportfolio2022/blob/main/img/bg-top.jpeg?raw=true);
+  background-image: url(/img/bg-top.jpeg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -188,6 +188,10 @@ nav ul li a {
 .alignItemsCenter{
   -ms-flex-align: center!important;
   align-items: center!important;
+}
+.justifyContentCenter{
+  -ms-flex-pack: center!important;
+  justify-content: center!important;
 }
 @media (max-width: 992px){
   .grid_md_12{
@@ -360,7 +364,7 @@ td {
       Footer
 =============================================================================================*/
 footer.footer-section {
-  background-color: #5b5c76;
+  background-color: #212529;
   height: 100px;
 }
 footer {
@@ -393,7 +397,7 @@ footer .scroll-to-top a {
   top: 10px;
   margin: 0 auto;
   border-radius: 50%;
-  background-color: #5b5c76;
+  background-color: #212529;
   text-align: center;
   -webkit-transition: all 0.2s ease-in-out 0s;
   transition: all 0.2s ease-in-out 0s;
@@ -409,4 +413,27 @@ footer .scroll-to-top a i {
 }
 footer .scroll-to-top a:hover {
   top: 0px;
+}
+
+/*============================================================================================
+      Info
+=============================================================================================*/
+.info-item {
+  height: 50px;
+  color: #ffffff;
+  background-color: #212529;
+
+  text-align: center;
+}
+
+.info-date {
+  font-size: 1rem;
+}
+
+.info-label {
+  border: 1px solid #ffffff;
+  padding: 3px 10px;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0 20px;
 }
