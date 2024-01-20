@@ -3,15 +3,22 @@ $(document).ready(function () {
   =====================================================*/
   AOS.init();
 
-  /*    Slide
+  /*    スライドナビゲーション
   =====================================================*/
   $('.sidenav').sidenav({
     edge: 'right',
   });
 
-  /*    Scroll
+  /*    スクロール
   =====================================================*/
   $("a[href*=\\#about]").click(function (event) {
+    event.preventDefault();
+    $("html, body").animate({
+      scrollTop: $($.attr(this, "href")).offset().top,
+    },1000
+    );
+  });
+  $("a[href*=\\#projects]").click(function (event) {
     event.preventDefault();
     $("html, body").animate({
       scrollTop: $($.attr(this, "href")).offset().top,
@@ -39,15 +46,15 @@ $(document).ready(function () {
     return false;
   });
 
-  /*    Modal
+  /*    モーダル
   =====================================================*/
-  // Materialize option
+  // Materialize オプション
   $('.modal').modal({
     startingTop: '0%',
     endingTop: '5%'
   })
 
-  // -----Add sequence number to modal content
+  // モーダル振り分け
   var modalContents = $('.modal')
   var modalTriggers = $('.modal-trigger')
   for (var i = 0; i < modalContents.length; i++) {
@@ -56,17 +63,17 @@ $(document).ready(function () {
     $(modalTriggers[i]).attr('href', '#modal' + i)
   }
 
-  // -----Add the closing modal button
+  // 閉じるボタンの追加
   $('.modal').append('<div class="close-button"><a href="#!" class="btn-floating waves-effect waves-light"><i class="material-icons">close</i></a></div>')
 
-  // -----Close modal window
+  // モーダルを閉じる
   $('.modal .close-button').click(function(event){
     event.preventDefault()
     var $targetModal = $(this).closest("[id^=modal]").attr('id')
     $('#' + $targetModal).modal('close')
   })
 
-  // -----Change image when clicking thumbnails
+  // サムネイルをクリックした時の画像変更
   $('.thumbnails img').click(function(){
     var $thisModalId = $(this).closest("[id^=modal]").attr('id')
     var $thisImg = $(this).attr('src')
@@ -79,4 +86,3 @@ $(document).ready(function () {
   })
 
 });
-
