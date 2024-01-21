@@ -111,7 +111,7 @@ nav ul li a {
   min-height: 400px;
   height: calc(100vh - 110px);
   color: #ffffff;
-  background-image: url(/img/bg_top.jpeg);
+  background-image: url(https://raw.githubusercontent.com/Haya0502/myportfolio/main/img/bg_top.jpeg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
